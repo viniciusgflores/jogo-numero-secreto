@@ -12,8 +12,8 @@ responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate: 1.2});
 
 
 function exibirMensagemInicial() { 
-    exibirTextoNaTela('h1', 'Jogo do Numero');
-    exibirTextoNaTela('p', 'Escolhe um numero entre 1 e 10');
+    exibirTextoNaTela('h1', 'Jogo do Numero Secreto');
+    exibirTextoNaTela('p', 'Escolhe um número entre 1 e 10');
 }
 
 exibirMensagemInicial()
@@ -28,11 +28,10 @@ function verificarChute() {
         let mensagemTentativa = `Voce acertou o ${tentativas} ${palavraTentativa}`;
         exibirTextoNaTela('p', mensagemTentativa);
         document.getElementById('reiniciar').removeAttribute('disabled');
-    } else {
         if (chute > numeroSecreto) {
-            exibirTextoNaTela('p', 'O numero secreto é menor');
+            exibirTextoNaTela('p', 'O número secreto é menor');
         } else {
-            exibirTextoNaTela('p', 'O numero secreto é maior');
+            exibirTextoNaTela('p', 'O número secreto é maior');
         } tentativas++;
         limparCampo();
     }
@@ -65,7 +64,6 @@ function reiniciarJogo(){
     limparCampo();
     tentativas = 1;
     exibirMensagemInicial();
-    document.getElementById('reiniciar').setAttribute('disabled',true) 
-}
+    document.getElementById('reiniciar').setAttribute('disabled',true)
 
 
